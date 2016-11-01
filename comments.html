@@ -11,10 +11,10 @@
         <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" href="favicon1.png" sizes="16x16" type="image/png">
     </head>
-<body id="wrapper">
-    <div class="container">
-        <img src="images/BonemasterBBQ.jpg" class="img-rounded img-responsive center-block" alt="BoneMaster BBQ"/>
-        <nav class="navbar navbar-default">
+    <body id="wrapper">
+        <div class="container">
+            <img src="images/BonemasterBBQ.jpg" class="img-rounded img-responsive center-block" alt="BoneMaster BBQ"/>
+            <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -32,11 +32,11 @@
                             <li><a href="about.html"><h4>About</h4></a></li>
                             <li><a href="menu.html"><h4>Menu</h4></a></li>
                             <li><a href="photos.html"><h4>Photos</h4></a></li>
-                            <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+                            <li><a href="contact.html"><h4>Contact</h4></a></li>
                             <li class="active"><a href="comments.html"><h4>Comments</h4></a></li>
                             <li><a href="catering.html"><h4>Catering</h4></a></li>
                             <li>
-                                <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch"><span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span></a>
+                                <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch"><span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm">Search</span></a>
                             </li>                            
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -50,10 +50,10 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Search Salemink</h4>
+                            <h4 class="modal-title">Search BonemasterBBQ</h4>
                         </div>
                         <div class="modal-body">
-                            <script>
+                            <script>                                
                                 (function() {
                                     var cx = '006257532291329875067:0tnlhh1agjw';
                                     var gcse = document.createElement('script');
@@ -90,30 +90,32 @@
             <!-- Begin Main Content -->                           
             <div class="container" id="maincontent">
                 <div class="jumbotron">                  
-                    <h1>Comments</h1>
-                        <hr>
-                        <div>
-                            {{range .}}                            
-                                <h2>{{.GivenName}}</h2>                                       
-                                <h3>{{.Comment}}</h3>
-                                <h4>{{.Date}}</h4>
-                                <hr />
-                            {{end}}
-                        </div>
-                    <form action="/sign" method="post" class="form-horizontal">
-                        <div class="form-group">
-                            <label for="givenname">First and Last Name:</label>
-                            <input type="text" class="form-control"  placeholder="First and Last Name" name="givenname"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="text" class="form-control" placeholder="Email" name="email" />
-                        </div>          
-                        <label for="comment">Comment:</label>
-                        <textarea class="form-control" placeholder="Comment" name="commentFormcontent" rows="5"></textarea>
-                        <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
-                    </form>
+                    <h1 class="text-center">Comments</h1>
                 </div>
+                <hr>
+                <!-- Begin Database Input -->
+                <div>
+                    {{range .}}                            
+                        <h2>{{.GivenName}}</h2>                                       
+                        <h3>{{.Comment}}</h3>
+                        <h4>{{.Date}}</h4>
+                        <hr />
+                    {{end}}
+                </div>
+                <!-- //End Database Input -->
+                <form action="/sign" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="givenname">First and Last Name:</label>
+                        <input type="text" class="form-control"  placeholder="First and Last Name" name="givenname"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="text" class="form-control" placeholder="Email" name="email" />
+                    </div>          
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" placeholder="Comment" name="commentFormcontent" rows="5"></textarea>
+                    <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+                </form>                
                 <hr>
                 <!-- Start Footer -->   
                 <div id="footer">
@@ -122,10 +124,10 @@
                 <!-- End Footer --> 
             </div>
             <!-- End Main Content -->
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>    
-</body>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>    
+    </body>
 </html>
